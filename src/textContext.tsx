@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react';
 
 type textContex = string
 
-interface UserContextType {
+interface TextContextType {
   text: textContex
   setState: React.Dispatch<React.SetStateAction<textContex>>;
 }
@@ -11,7 +11,7 @@ interface textContextProviderProps {
   children: React.ReactNode;
 }
 
-export const textContex = createContext<UserContextType | null>(null);
+export const textContex = createContext<TextContextType | null>(null);
 
 
 const TextContextProvider: React.FC<textContextProviderProps> = (props) => {

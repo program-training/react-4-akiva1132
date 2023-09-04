@@ -1,12 +1,16 @@
 import "./App.css";
-import { Example } from "./components/Example/Example";
+import React from 'react';
+import TextContextProvider from './textContext';
+import { GrandpaComponent } from './components/Grandpa/Grandpa';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <Example />{" "}
-    </>
+    <div>
+      <TextContextProvider>
+          <GrandpaComponent />
+      </TextContextProvider>
+    </div>
   );
-}
+};
 
 export default App;
